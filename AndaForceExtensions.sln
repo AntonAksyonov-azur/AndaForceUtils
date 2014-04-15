@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndaForceUtils", "AndaForceExtensions\AndaForceUtils.csproj", "{58B0A1A1-963F-4A81-9D5E-172A58F3B9CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndaForceUtilsTest", "AndaForceExtensionsTest\AndaForceUtilsTest.csproj", "{A14778A5-08C5-4BF6-A0DC-E4A40640DF97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58B0A1A1-963F-4A81-9D5E-172A58F3B9CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58B0A1A1-963F-4A81-9D5E-172A58F3B9CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58B0A1A1-963F-4A81-9D5E-172A58F3B9CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58B0A1A1-963F-4A81-9D5E-172A58F3B9CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A14778A5-08C5-4BF6-A0DC-E4A40640DF97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A14778A5-08C5-4BF6-A0DC-E4A40640DF97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A14778A5-08C5-4BF6-A0DC-E4A40640DF97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A14778A5-08C5-4BF6-A0DC-E4A40640DF97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
