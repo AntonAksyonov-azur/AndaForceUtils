@@ -76,12 +76,6 @@ namespace AndaForceExtensions.com.andaforce.arazect.serialization
         {
             try
             {
-                String dirPath = Path.GetDirectoryName(savePath);
-                if (dirPath != null && !Directory.Exists(dirPath))
-                {
-                    Directory.CreateDirectory(dirPath);
-                }
-
                 var serializer = new XmlSerializer(typeof (T));
                 TextWriter writer = new StreamWriter(savePath);
                 serializer.Serialize(writer, configurationObject);
@@ -100,8 +94,11 @@ namespace AndaForceExtensions.com.andaforce.arazect.serialization
         private static void ReportError<T>(String typeMessage, InfoDelegate onError, Exception e)
             where T : new()
         {
-            onError.Invoke(
-                String.Format("{0} error: {1}", typeMessage, e.Message));
+            if (onError != null)
+            {
+                onError.Invoke(
+                    String.Format("{0} error: {1}", typeMessage, e.Message));
+            }
         }
 
         private static void ReportSuccess<T>(String typeMessage, string path, InfoDelegate onSuccess)
