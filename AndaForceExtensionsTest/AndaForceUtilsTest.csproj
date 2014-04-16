@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="com\andaforce\arazect\datetime\DateTimeExtension.cs" />
+    <Compile Include="com\andaforce\arazect\math\MathHelperTests.cs" />
     <Compile Include="com\andaforce\arazect\serialization\ConfigurationLoaderTest.cs" />
     <Compile Include="com\andaforce\arazect\variables\IsValueBetweenTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

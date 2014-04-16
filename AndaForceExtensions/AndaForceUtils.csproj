@@ -46,6 +46,7 @@
     <Compile Include="com\andaforce\arazect\collections\generic\ListExtension.cs" />
     <Compile Include="com\andaforce\arazect\datetime\DateTimeExtension.cs" />
     <Compile Include="com\andaforce\arazect\enumerations\EnumExtension.cs" />
+    <Compile Include="com\andaforce\arazect\math\MathHelper.cs" />
     <Compile Include="com\andaforce\arazect\package.helpers\RandomHelper.cs" />
     <Compile Include="com\andaforce\arazect\random\RandomExtension.cs" />
     <Compile Include="com\andaforce\arazect\serialization\ConfigurationLoader.cs" />
