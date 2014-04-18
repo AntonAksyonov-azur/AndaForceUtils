@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="com\andaforce\arazect\callback\AbstractCallbackChainElement.cs" />
+    <Compile Include="com\andaforce\arazect\callback\ChainActionStatus.cs" />
+    <Compile Include="com\andaforce\arazect\callback\ChainHelper.cs" />
     <Compile Include="com\andaforce\arazect\collections\generic\ArrayExtension.cs" />
     <Compile Include="com\andaforce\arazect\collections\generic\DictionaryExtension.cs" />
     <Compile Include="com\andaforce\arazect\collections\generic\ListExtension.cs" />
