@@ -46,6 +46,7 @@
     <Compile Include="com\andaforce\arazect\callback\ChainHelper.cs" />
     <Compile Include="com\andaforce\arazect\collections\generic\ArrayExtension.cs" />
     <Compile Include="com\andaforce\arazect\collections\generic\DictionaryExtension.cs" />
+    <Compile Include="com\andaforce\arazect\collections\generic\IEnumerableExtension.cs" />
     <Compile Include="com\andaforce\arazect\collections\generic\ListExtension.cs" />
     <Compile Include="com\andaforce\arazect\collections\linq\ClonedLinqCompareMethods.cs" />
     <Compile Include="com\andaforce\arazect\collections\linq\ClonedLinqSumMethods.cs" />

@@ -12,11 +12,11 @@ namespace AndaForceExtensions.com.andaforce.arazect.collections.linq
             if (list.Count > 0)
             {
                 var maxValue = list[0];
-                for (int i = 0; i < list.Count; i++)
+                foreach (T t in list)
                 {
-                    if (maxValue.CompareTo(list[i]) < 0)
+                    if (maxValue.CompareTo(t) < 0)
                     {
-                        maxValue = list[i];
+                        maxValue = t;
                     }
                 }
 
@@ -30,11 +30,11 @@ namespace AndaForceExtensions.com.andaforce.arazect.collections.linq
             if (list.Count > 0)
             {
                 var minValue = list[0];
-                for (int i = 0; i < list.Count; i++)
+                foreach (T t in list)
                 {
-                    if (minValue.CompareTo(list[i]) > 0)
+                    if (minValue.CompareTo(t) > 0)
                     {
-                        minValue = list[i];
+                        minValue = t;
                     }
                 }
 

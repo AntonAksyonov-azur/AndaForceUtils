@@ -17,8 +17,6 @@ namespace AndaForceExtensionsTest.com.andaforce.arazect.collections.linq
             var result = list.ClonedMax();
 
             Assert.AreEqual(3.0f, result, "Error");
-
-            Math.
         }
 
         [Test]
