@@ -47,6 +47,8 @@
     <Compile Include="com\andaforce\arazect\collections\generic\ArrayExtension.cs" />
     <Compile Include="com\andaforce\arazect\collections\generic\DictionaryExtension.cs" />
     <Compile Include="com\andaforce\arazect\collections\generic\ListExtension.cs" />
+    <Compile Include="com\andaforce\arazect\collections\linq\ClonedLinqCompareMethods.cs" />
+    <Compile Include="com\andaforce\arazect\collections\linq\ClonedLinqSumMethods.cs" />
     <Compile Include="com\andaforce\arazect\datetime\DateTimeExtension.cs" />
     <Compile Include="com\andaforce\arazect\enumerations\EnumExtension.cs" />
     <Compile Include="com\andaforce\arazect\math\MathHelper.cs" />
@@ -56,6 +58,7 @@
     <Compile Include="com\andaforce\arazect\variables\IsValueBetween.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

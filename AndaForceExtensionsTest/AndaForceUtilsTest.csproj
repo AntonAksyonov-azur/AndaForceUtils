@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="com\andaforce\arazect\collections\linq\ClonedLinqCompareMethodsTest.cs" />
     <Compile Include="com\andaforce\arazect\datetime\DateTimeExtension.cs" />
     <Compile Include="com\andaforce\arazect\math\MathHelperTests.cs" />
     <Compile Include="com\andaforce\arazect\serialization\ConfigurationLoaderTest.cs" />
