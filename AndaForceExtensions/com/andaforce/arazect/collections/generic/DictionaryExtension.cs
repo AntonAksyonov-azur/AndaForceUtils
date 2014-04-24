@@ -9,13 +9,21 @@ namespace AndaForceExtensions.com.andaforce.arazect.collections.generic
         public static TValue GetRandomItem<TKey, TValue>(this Dictionary<TKey, TValue> dictionary)
         {
             TValue[] flatten = dictionary.Select(x => x.Value).ToArray();
-            return flatten[RandomHelper.Rnd.Next(0, flatten.Length)];
+            if (flatten.Length > 0)
+            {
+                return flatten[RandomHelper.Rnd.Next(0, flatten.Length)];
+            }
+            return default(TValue);
         }
         
         public static TKey GetRandomKey<TKey, TValue>(this Dictionary<TKey, TValue> dictionary)
         {
             TKey[] flatten = dictionary.Keys.ToArray();
-            return flatten[RandomHelper.Rnd.Next(0, dictionary.Keys.Count)];
+            if (flatten.Length > 0)
+            {
+                return flatten[RandomHelper.Rnd.Next(0, dictionary.Keys.Count)];
+            }
+            return default(TKey);
         }
     }
 }

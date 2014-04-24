@@ -1,4 +1,5 @@
-﻿using AndaForceExtensions.com.andaforce.arazect.package.helpers;
+﻿using System;
+using AndaForceExtensions.com.andaforce.arazect.package.helpers;
 
 namespace AndaForceExtensions.com.andaforce.arazect.collections.generic
 {
@@ -6,7 +7,11 @@ namespace AndaForceExtensions.com.andaforce.arazect.collections.generic
     {
         public static TValue GetRandomItem<TValue>(this TValue[] array)
         {
-            return array[RandomHelper.Rnd.Next(0, array.Length - 1)];
+            if (array.Length > 0)
+            {
+                return array[RandomHelper.Rnd.Next(0, array.Length - 1)];
+            }
+            return default(TValue);
         }
     }
 }
