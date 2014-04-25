@@ -45,6 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="com\andaforce\arazect\collections\generic\ArrayExtensionTest.cs" />
+    <Compile Include="com\andaforce\arazect\collections\generic\DictionaryExtensionTest.cs" />
+    <Compile Include="com\andaforce\arazect\collections\generic\ListExtensionTest.cs" />
     <Compile Include="com\andaforce\arazect\collections\linq\ClonedLinqCompareMethodsTest.cs" />
     <Compile Include="com\andaforce\arazect\collections\linq\ClonedLinqSumMethodsTest.cs" />
     <Compile Include="com\andaforce\arazect\datetime\DateTimeExtension.cs" />
