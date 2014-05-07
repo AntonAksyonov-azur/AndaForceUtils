@@ -9,7 +9,7 @@ namespace AndaForceExtensions.com.andaforce.arazect.collections.generic
         {
             if (array.Length > 0)
             {
-                return array[RandomHelper.Rnd.Next(0, array.Length - 1)];
+                return array[RandomHelper.Rnd.Next(0, array.Length)];
             }
             return default(TValue);
         }

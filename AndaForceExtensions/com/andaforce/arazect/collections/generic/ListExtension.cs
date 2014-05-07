@@ -9,7 +9,7 @@ namespace AndaForceExtensions.com.andaforce.arazect.collections.generic
         {
             if (list.Count > 0)
             {
-                return list[RandomHelper.Rnd.Next(0, list.Count - 1)];
+                return list[RandomHelper.Rnd.Next(0, list.Count)];
             }
             return default(TValue);
         }
@@ -18,7 +18,7 @@ namespace AndaForceExtensions.com.andaforce.arazect.collections.generic
         {
             if (list.Count > 0)
             {
-                var value = list[RandomHelper.Rnd.Next(0, list.Count - 1)];
+                var value = list[RandomHelper.Rnd.Next(0, list.Count)];
                 list.Remove(value);
 
                 return value;
