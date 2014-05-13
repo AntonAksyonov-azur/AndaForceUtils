@@ -1,7 +1,6 @@
-﻿using System;
-using AndaForceExtensions.com.andaforce.arazect.package.helpers;
+﻿using AndaForceExtensions.com.andaforce.arazect.package.helpers;
 
-namespace AndaForceExtensions.com.andaforce.arazect.collections.generic
+namespace AndaForceExtensions.com.andaforce.arazect.collections.generic.extension
 {
     public static class ArrayExtension
     {

@@ -44,9 +44,9 @@
     <Compile Include="com\andaforce\arazect\callback\AbstractCallbackChainElement.cs" />
     <Compile Include="com\andaforce\arazect\callback\ChainActionStatus.cs" />
     <Compile Include="com\andaforce\arazect\callback\ChainHelper.cs" />
-    <Compile Include="com\andaforce\arazect\collections\generic\ArrayExtension.cs" />
-    <Compile Include="com\andaforce\arazect\collections\generic\DictionaryExtension.cs" />
-    <Compile Include="com\andaforce\arazect\collections\generic\IEnumerableExtension.cs" />
+    <Compile Include="com\andaforce\arazect\collections\generic\extension\ArrayExtension.cs" />
+    <Compile Include="com\andaforce\arazect\collections\generic\extension\DictionaryExtension.cs" />
+    <Compile Include="com\andaforce\arazect\collections\generic\extension\IEnumerableExtension.cs" />
     <Compile Include="com\andaforce\arazect\collections\generic\ListExtension.cs" />
     <Compile Include="com\andaforce\arazect\collections\linq\ClonedLinqCompareMethods.cs" />
     <Compile Include="com\andaforce\arazect\collections\linq\ClonedLinqSumMethods.cs" />
@@ -59,8 +59,7 @@
     <Compile Include="com\andaforce\arazect\serialization\ConfigurationLoader.cs" />
     <Compile Include="com\andaforce\arazect\variables\IsValueBetween.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup />
+    </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

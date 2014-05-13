@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace AndaForceExtensions.com.andaforce.arazect.collections.generic
+namespace AndaForceExtensions.com.andaforce.arazect.collections.generic.extension
 {
     public static class EnumerableExtension
     {

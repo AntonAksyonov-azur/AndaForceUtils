@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using AndaForceExtensions.com.andaforce.arazect.collections.generic;
+using AndaForceExtensions.com.andaforce.arazect.collections.generic.extension;
 using NUnit.Framework;
 
 namespace AndaForceExtensionsTest.com.andaforce.arazect.collections.generic
@@ -37,7 +36,7 @@ namespace AndaForceExtensionsTest.com.andaforce.arazect.collections.generic
         [Test]
         public void TestSpread()
         {
-            var array = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            var array = new[] {1, 2, 3, 4, 5, 6, 7, 8, 9};
             var testList = new int[1000];
 
             for (int i = 0; i < 1000; i++)

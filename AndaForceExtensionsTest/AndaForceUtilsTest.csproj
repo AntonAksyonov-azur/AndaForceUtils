@@ -55,8 +55,7 @@
     <Compile Include="com\andaforce\arazect\serialization\ConfigurationLoaderTest.cs" />
     <Compile Include="com\andaforce\arazect\variables\IsValueBetweenTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup />
+    </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AndaForceExtensions\AndaForceUtils.csproj">
       <Project>{58B0A1A1-963F-4A81-9D5E-172A58F3B9CC}</Project>

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
-using AndaForceExtensions.com.andaforce.arazect.collections.generic;
+using AndaForceExtensions.com.andaforce.arazect.collections.generic.extension;
 using AndaForceExtensions.com.andaforce.arazect.collections.linq;
 using NUnit.Framework;
 
@@ -12,7 +11,12 @@ namespace AndaForceExtensionsTest.com.andaforce.arazect.collections.linq
     {
         private static readonly object[] TestCase =
         {
-            new TestData() {Collection = new List<IComparable> {1.0f, 2.0f, 3.0f, 4.0f, 5.0f}, ExpectedMax = 5.0f, ExpectedMin = 1},
+            new TestData()
+            {
+                Collection = new List<IComparable> {1.0f, 2.0f, 3.0f, 4.0f, 5.0f},
+                ExpectedMax = 5.0f,
+                ExpectedMin = 1
+            },
             new TestData() {Collection = new List<IComparable> {1, 2, 3, 4, 5}, ExpectedMax = 5, ExpectedMin = 1},
             new TestData() {Collection = new List<IComparable> {1, 1, 1, 1, 1}, ExpectedMax = 1, ExpectedMin = 1},
         };

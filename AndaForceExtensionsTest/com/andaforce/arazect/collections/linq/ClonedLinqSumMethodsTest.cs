@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using AndaForceExtensions.com.andaforce.arazect.collections.generic;
+using AndaForceExtensions.com.andaforce.arazect.collections.generic.extension;
 using AndaForceExtensions.com.andaforce.arazect.collections.linq;
 using NUnit.Framework;
 
