@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("AndaForceExtensions")]
+[assembly: AssemblyTitle("AndaForce Extensions")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("DNA Project")]
-[assembly: AssemblyProduct("AndaForceExtensions")]
-[assembly: AssemblyCopyright("Copyright © DNA Project 2014")]
+[assembly: AssemblyCompany("AndaForce")]
+[assembly: AssemblyProduct("AndaForce Extensions")]
+[assembly: AssemblyCopyright("Copyright © AndaForce corp.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
