@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using AndaForceExtensions.com.andaforce.arazect.collections.generic.extension;
 using NUnit.Framework;
 
-namespace AndaForceExtensionsTest.com.andaforce.arazect.collections.generic
+namespace AndaForceExtensionsTest.com.andaforce.arazect.collections.generic.extension
 {
     [TestFixture]
     public class DictionaryExtensionTest
