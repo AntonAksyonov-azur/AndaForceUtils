@@ -45,9 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="com\andaforce\arazect\collections\generic\ArrayExtensionTest.cs" />
-    <Compile Include="com\andaforce\arazect\collections\generic\DictionaryExtensionTest.cs" />
-    <Compile Include="com\andaforce\arazect\collections\generic\ListExtensionTest.cs" />
+    <Compile Include="com\andaforce\arazect\collections\generic\extension\ArrayExtensionTest.cs" />
+    <Compile Include="com\andaforce\arazect\collections\generic\extension\DictionaryExtensionTest.cs" />
+    <Compile Include="com\andaforce\arazect\collections\generic\extension\ListExtensionTest.cs" />
+    <Compile Include="com\andaforce\arazect\collections\generic\LinearArrayTest.cs" />
     <Compile Include="com\andaforce\arazect\collections\linq\ClonedLinqCompareMethodsTest.cs" />
     <Compile Include="com\andaforce\arazect\collections\linq\ClonedLinqSumMethodsTest.cs" />
     <Compile Include="com\andaforce\arazect\datetime\DateTimeExtension.cs" />
@@ -55,7 +56,7 @@
     <Compile Include="com\andaforce\arazect\serialization\ConfigurationLoaderTest.cs" />
     <Compile Include="com\andaforce\arazect\variables\IsValueBetweenTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    </ItemGroup>
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AndaForceExtensions\AndaForceUtils.csproj">
       <Project>{58B0A1A1-963F-4A81-9D5E-172A58F3B9CC}</Project>
