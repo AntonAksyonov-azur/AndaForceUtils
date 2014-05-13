@@ -85,14 +85,13 @@ namespace AndaForceExtensions.com.andaforce.arazect.serialization
             }
             catch (Exception e)
             {
-                ReportError<T>("Serialization", onError, e);
+                ReportError("Serialization", onError, e);
             }
         }
 
         #endregion
 
-        private static void ReportError<T>(String typeMessage, InfoDelegate onError, Exception e)
-            where T : new()
+        private static void ReportError(String typeMessage, InfoDelegate onError, Exception e)
         {
             if (onError != null)
             {

@@ -11,17 +11,17 @@ namespace AndaForceExtensionsTest.com.andaforce.arazect.collections.linq
     {
         private static readonly object[] TestCaseSingle =
         {
-            new TestDataSingle() {Collection = new List<float> {1.0f, 2.0f, 3.0f, 4.0f, 5.0f}, Expected = 15.0f},
-            new TestDataSingle() {Collection = new List<float> {-1.0f, -2.0f, -3.0f, -4.0f, -5.0f}, Expected = -15.0f},
-            new TestDataSingle() {Collection = new List<float> {1.0f, 2.0f, 3.0f, -6.0f}, Expected = 0.0f}
+            new TestDataSingle {Collection = new List<float> {1.0f, 2.0f, 3.0f, 4.0f, 5.0f}, Expected = 15.0f},
+            new TestDataSingle {Collection = new List<float> {-1.0f, -2.0f, -3.0f, -4.0f, -5.0f}, Expected = -15.0f},
+            new TestDataSingle {Collection = new List<float> {1.0f, 2.0f, 3.0f, -6.0f}, Expected = 0.0f}
         };
 
 
         private static readonly object[] TestCaseInt32 =
         {
-            new TestDataInt32() {Collection = new List<int> {1, 2, 3, 4, 5}, Expected = 15},
-            new TestDataInt32() {Collection = new List<int> {-1, -2, -3, -4, -5}, Expected = -15},
-            new TestDataInt32() {Collection = new List<int> {1, 2, 3, -6}, Expected = 0}
+            new TestDataInt32 {Collection = new List<int> {1, 2, 3, 4, 5}, Expected = 15},
+            new TestDataInt32 {Collection = new List<int> {-1, -2, -3, -4, -5}, Expected = -15},
+            new TestDataInt32 {Collection = new List<int> {1, 2, 3, -6}, Expected = 0}
         };
 
         [Test, TestCaseSource("TestCaseSingle")]

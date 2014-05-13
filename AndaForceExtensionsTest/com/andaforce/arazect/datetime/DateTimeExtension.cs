@@ -9,22 +9,22 @@ namespace AndaForceExtensionsTest.com.andaforce.arazect.datetime
     {
         private static readonly object[] TomorrowData =
         {
-            new TestData() {A = new DateTime(2000, 1, 1), B = new DateTime(2000, 1, 2), Expected = true},
-            new TestData() {A = new DateTime(2000, 1, 1), B = new DateTime(2000, 1, 3), Expected = false},
-            new TestData() {A = new DateTime(2000, 1, 3), B = new DateTime(2000, 1, 1), Expected = false},
+            new TestData {A = new DateTime(2000, 1, 1), B = new DateTime(2000, 1, 2), Expected = true},
+            new TestData {A = new DateTime(2000, 1, 1), B = new DateTime(2000, 1, 3), Expected = false},
+            new TestData {A = new DateTime(2000, 1, 3), B = new DateTime(2000, 1, 1), Expected = false}
         };
 
         private static readonly object[] HumanData =
         {
-            new TestData() {A = new DateTime(2000, 1, 2), B = new DateTime(2000, 1, 2), Expected = "Сегодня"},
-            new TestData() {A = new DateTime(2000, 1, 1), B = new DateTime(2000, 1, 2), Expected = "Вчера"},
-            new TestData()
+            new TestData {A = new DateTime(2000, 1, 2), B = new DateTime(2000, 1, 2), Expected = "Сегодня"},
+            new TestData {A = new DateTime(2000, 1, 1), B = new DateTime(2000, 1, 2), Expected = "Вчера"},
+            new TestData
             {
                 A = new DateTime(2000, 1, 1),
                 B = new DateTime(2000, 1, 3),
                 Expected = GetSimpleDateString(new DateTime(2000, 1, 1))
             },
-            new TestData()
+            new TestData
             {
                 A = new DateTime(2000, 1, 20),
                 B = new DateTime(2000, 1, 1),

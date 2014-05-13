@@ -1,6 +1,5 @@
 ﻿using System;
 using AndaForceExtensions.com.andaforce.arazect.collections.generic;
-using AndaForceExtensions.com.andaforce.arazect.collections.generic.extension;
 using NUnit.Framework;
 
 namespace AndaForceExtensionsTest.com.andaforce.arazect.collections.generic

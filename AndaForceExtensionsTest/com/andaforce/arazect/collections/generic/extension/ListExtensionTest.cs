@@ -11,7 +11,7 @@ namespace AndaForceExtensionsTest.com.andaforce.arazect.collections.generic.exte
         [Test]
         public void TestGetRandomItem()
         {
-            var list = new List<int>() {1, 2, 3, 4, 5};
+            var list = new List<int> {1, 2, 3, 4, 5};
             var randomItem = list.GetRandomItem();
 
             Assert.IsTrue(list.Contains(randomItem), "Wrong item received");
@@ -20,7 +20,7 @@ namespace AndaForceExtensionsTest.com.andaforce.arazect.collections.generic.exte
         [Test]
         public void TestGetOneItem()
         {
-            var list = new List<int>() {123456789};
+            var list = new List<int> {123456789};
 
             Assert.AreEqual(123456789, list.GetRandomItem(), "Wrong item received");
         }
@@ -36,7 +36,7 @@ namespace AndaForceExtensionsTest.com.andaforce.arazect.collections.generic.exte
         [Test]
         public void TestSpread()
         {
-            var list = new List<int>() {1, 2, 3, 4, 5, 6, 7, 8, 9};
+            var list = new List<int> {1, 2, 3, 4, 5, 6, 7, 8, 9};
             var testList = new List<int>();
 
             for (int i = 0; i < 1000; i++)
