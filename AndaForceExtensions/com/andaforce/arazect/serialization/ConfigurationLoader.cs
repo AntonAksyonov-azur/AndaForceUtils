@@ -18,7 +18,7 @@ namespace AndaForceExtensions.com.andaforce.arazect.serialization
             {
                 var serializer = new XmlSerializer(typeof (T));
                 TextReader reader = new StreamReader(loadPath);
-                T instance = (T) serializer.Deserialize(reader);
+                var instance = (T) serializer.Deserialize(reader);
                 reader.Close();
 
                 ReportSuccess<T>("Deserialization", loadPath, onSuccess);
@@ -32,7 +32,7 @@ namespace AndaForceExtensions.com.andaforce.arazect.serialization
                     ReportError<T>("Deserialization", onError, e);
                 }
 
-                T instance = new T();
+                var instance = new T();
                 instance.InitDefault();
                 return instance;
             }
@@ -47,7 +47,7 @@ namespace AndaForceExtensions.com.andaforce.arazect.serialization
             {
                 var serializer = new XmlSerializer(typeof (T));
                 TextReader reader = new StringReader(source);
-                T instance = (T) serializer.Deserialize(reader);
+                var instance = (T) serializer.Deserialize(reader);
                 reader.Close();
 
                 ReportSuccess<T>("Deserialization", "Raw source", onSuccess);
@@ -58,7 +58,7 @@ namespace AndaForceExtensions.com.andaforce.arazect.serialization
             {
                 ReportError<T>("Deserialization", onError, e);
 
-                T instance = new T();
+                var instance = new T();
                 instance.InitDefault();
                 return instance;
             }
