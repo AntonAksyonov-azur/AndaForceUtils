@@ -47,12 +47,12 @@ namespace AndaForceExtensions.com.andaforce.arazect.datetime
             var dmyChecked = new DateTime(date.Year, date.Month, date.Day);
             var dmyCurrent = new DateTime(today.Year, today.Month, today.Day);
 
-            if ((dmyCurrent - dmyChecked).TotalDays == 0.0f)
+            if ((int) (dmyCurrent - dmyChecked).TotalDays == 0)
             {
                 return "Сегодня";
             }
 
-            if ((dmyCurrent - dmyChecked).TotalDays == 1.0f)
+            if ((int) (dmyCurrent - dmyChecked).TotalDays == 1)
             {
                 return "Вчера";
             }
