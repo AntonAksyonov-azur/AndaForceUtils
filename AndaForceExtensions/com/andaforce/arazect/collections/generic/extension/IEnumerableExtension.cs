@@ -9,12 +9,13 @@ namespace AndaForceExtensions.com.andaforce.arazect.collections.generic.extensio
     {
         public static String PrintElements<T>(this IEnumerable<T> enumerable)
         {
-            if (enumerable.Any())
+            var items = enumerable.ToArray();
+            if (items.Any())
             {
                 var stringBuilder = new StringBuilder();
                 stringBuilder.Append(String.Format("{0}: {{", typeof (T)));
 
-                foreach (var item in enumerable)
+                foreach (var item in items)
                 {
                     stringBuilder.Append(String.Format("[{0}], ", item));
                 }
