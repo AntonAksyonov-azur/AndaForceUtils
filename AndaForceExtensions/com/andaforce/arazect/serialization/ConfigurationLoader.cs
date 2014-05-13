@@ -29,7 +29,7 @@ namespace AndaForceExtensions.com.andaforce.arazect.serialization
             {
                 if (onError != null)
                 {
-                    ReportError<T>("Deserialization", onError, e);
+                    ReportError("Deserialization", onError, e);
                 }
 
                 var instance = new T();
@@ -56,7 +56,7 @@ namespace AndaForceExtensions.com.andaforce.arazect.serialization
             }
             catch (Exception e)
             {
-                ReportError<T>("Deserialization", onError, e);
+                ReportError("Deserialization", onError, e);
 
                 var instance = new T();
                 instance.InitDefault();
