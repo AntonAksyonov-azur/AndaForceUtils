@@ -8,6 +8,14 @@ namespace AndaForceExtensions.com.andaforce.arazect.collections.generic.extensio
     {
         #region Single
 
+        public static Int32 FindFirstClosestId(this IEnumerable<Single> enumerable, Single value)
+        {
+            return enumerable
+                .Select((a, position) => new {a, distance = Math.Abs(a - value), id = position})
+                .OrderBy(b => b.distance)
+                .First().id;
+        }
+
         public static Single FindFirstClosest(this IEnumerable<Single> enumerable, Single value)
         {
             return enumerable
@@ -26,7 +34,8 @@ namespace AndaForceExtensions.com.andaforce.arazect.collections.generic.extensio
                 .ToList();
         }
 
-        public static List<Single> FindAllClosestWithinRange(this IEnumerable<Single> enumerable, Single value, float range)
+        public static List<Single> FindAllClosestWithinRange(this IEnumerable<Single> enumerable, Single value,
+            float range)
         {
             return enumerable
                 .Select(a => new {a, distance = Math.Abs(a - value)})
@@ -38,6 +47,14 @@ namespace AndaForceExtensions.com.andaforce.arazect.collections.generic.extensio
         #endregion
 
         #region Int32
+
+        public static Int32 FindFirstClosestId(this IEnumerable<Int32> enumerable, Int32 value)
+        {
+            return enumerable
+                .Select((a, position) => new {a, distance = Math.Abs(a - value), id = position})
+                .OrderBy(b => b.distance)
+                .First().id;
+        }
 
         public static Int32 FindFirstClosest(this IEnumerable<Int32> enumerable, Int32 value)
         {
