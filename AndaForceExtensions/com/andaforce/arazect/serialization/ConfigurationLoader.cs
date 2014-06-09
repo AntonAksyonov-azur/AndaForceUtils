@@ -106,8 +106,6 @@ namespace AndaForceExtensions.com.andaforce.arazect.serialization
                 {
                     ReportError("Deserialization", onError, e);
                 }
-
-                ReportError("Deserialization", onError, e);
                 return CreateDefaultObject<T>();
             }
         }
