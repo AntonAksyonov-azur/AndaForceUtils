@@ -14,54 +14,23 @@ namespace AndaForceExtensions.com.andaforce.arazect.serialization
             InfoDelegate onSuccess = null)
             where T : IConfigurationObject, new()
         {
-            try
-            {
-                var serializer = new XmlSerializer(typeof (T));
-                TextReader reader = new StreamReader(loadPath);
-                var instance = (T) serializer.Deserialize(reader);
-                reader.Close();
+            var reader = new StreamReader(loadPath);
+            var instance = DeserializeObject<T>(reader, loadPath, onError, onSuccess);
+            reader.Close();
 
-                ReportSuccess<T>("Deserialization", loadPath, onSuccess);
-
-                return instance;
-            }
-            catch (Exception e)
-            {
-                if (onError != null)
-                {
-                    ReportError("Deserialization", onError, e);
-                }
-
-                var instance = new T();
-                instance.InitDefault();
-                return instance;
-            }
+            return instance;
         }
 
-
-        public static T LoadConfigurationFromString<T>(String source,
+        public static T LoadConfigurationFromString<T>(
+            String source,
             InfoDelegate onError = null,
             InfoDelegate onSuccess = null) where T : IConfigurationObject, new()
         {
-            try
-            {
-                var serializer = new XmlSerializer(typeof (T));
-                TextReader reader = new StringReader(source);
-                var instance = (T) serializer.Deserialize(reader);
-                reader.Close();
+            var reader = new StringReader(source);
+            var instance = DeserializeObject<T>(reader, "Raw", onError, onSuccess);
+            reader.Close();
 
-                ReportSuccess<T>("Deserialization", "Raw source", onSuccess);
-
-                return instance;
-            }
-            catch (Exception e)
-            {
-                ReportError("Deserialization", onError, e);
-
-                var instance = new T();
-                instance.InitDefault();
-                return instance;
-            }
+            return instance;
         }
 
         #endregion
@@ -91,6 +60,8 @@ namespace AndaForceExtensions.com.andaforce.arazect.serialization
 
         #endregion
 
+        #region Report
+
         private static void ReportError(String typeMessage, InfoDelegate onError, Exception e)
         {
             if (onError != null)
@@ -106,9 +77,50 @@ namespace AndaForceExtensions.com.andaforce.arazect.serialization
             if (onSuccess != null)
             {
                 onSuccess.Invoke(
-                    String.Format("{0} completed with {1} at {2}", typeMessage, typeof (T), path));
+                    String.Format("{0} completed with {1} (source info: {2})", typeMessage, typeof (T), path));
             }
         }
+
+        #endregion
+
+        #region Base Methods
+
+        private static T DeserializeObject<T>(
+            TextReader reader,
+            String sourceInfo = "Raw",
+            InfoDelegate onError = null,
+            InfoDelegate onSuccess = null) where T : IConfigurationObject, new()
+        {
+            try
+            {
+                var serializer = new XmlSerializer(typeof (T));
+                var instance = (T) serializer.Deserialize(reader);
+
+                ReportSuccess<T>("Deserialization", sourceInfo, onSuccess);
+
+                return instance;
+            }
+            catch (Exception e)
+            {
+                if (onError != null)
+                {
+                    ReportError("Deserialization", onError, e);
+                }
+
+                ReportError("Deserialization", onError, e);
+                return CreateDefaultObject<T>();
+            }
+        }
+
+        private static T CreateDefaultObject<T>() where T : IConfigurationObject, new()
+        {
+            var instance = new T();
+            instance.InitDefault();
+
+            return instance;
+        }
+
+        #endregion
     }
 
     public interface IConfigurationObject
