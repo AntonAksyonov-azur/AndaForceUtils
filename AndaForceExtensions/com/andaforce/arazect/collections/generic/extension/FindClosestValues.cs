@@ -11,26 +11,26 @@ namespace AndaForceExtensions.com.andaforce.arazect.collections.generic.extensio
         public static Int32 FindFirstClosestId(this IEnumerable<Single> enumerable, Single value)
         {
             return enumerable
-                .Select((a, position) => new {a, distance = Math.Abs(a - value), id = position})
-                .OrderBy(b => b.distance)
-                .First().id;
+                .Select((a, position) => new {Value = a, Distance = Math.Abs(a - value), Id = position})
+                .OrderBy(b => b.Distance).ThenBy(c => c.Value)
+                .First().Id;
         }
 
         public static Single FindFirstClosest(this IEnumerable<Single> enumerable, Single value)
         {
             return enumerable
-                .Select(a => new {a, distance = Math.Abs(a - value)})
-                .OrderBy(b => b.distance)
-                .First().a;
+                .Select(a => new { Value = a, Distance = Math.Abs(a - value) })
+                .OrderBy(b => b.Distance).ThenBy(c => c.Value)
+                .First().Value;
         }
 
         public static List<Single> FindCountClosest(this IEnumerable<Single> enumerable, Single value, int count)
         {
             return enumerable
-                .Select(a => new {a, distance = Math.Abs(a - value)})
-                .OrderBy(b => b.distance)
+                .Select(a => new {Value = a, Distance = Math.Abs(a - value)})
+                .OrderBy(b => b.Distance).ThenBy(c => c.Value)
                 .Take(count)
-                .Select(c => c.a)
+                .Select(c => c.Value)
                 .ToList();
         }
 
@@ -38,9 +38,9 @@ namespace AndaForceExtensions.com.andaforce.arazect.collections.generic.extensio
             float range)
         {
             return enumerable
-                .Select(a => new {a, distance = Math.Abs(a - value)})
-                .Where(b => b.distance <= range)
-                .Select(c => c.a)
+                .Select(a => new {Value = a, Distance = Math.Abs(a - value)})
+                .Where(b => b.Distance <= range)
+                .Select(c => c.Value)
                 .ToList();
         }
 
@@ -51,35 +51,35 @@ namespace AndaForceExtensions.com.andaforce.arazect.collections.generic.extensio
         public static Int32 FindFirstClosestId(this IEnumerable<Int32> enumerable, Int32 value)
         {
             return enumerable
-                .Select((a, position) => new {a, distance = Math.Abs(a - value), id = position})
-                .OrderBy(b => b.distance)
-                .First().id;
+                .Select((a, position) => new {Value = a, Distance = Math.Abs(a - value), Id = position})
+                .OrderBy(b => b.Distance).ThenBy(c => c.Value)
+                .First().Id;
         }
 
         public static Int32 FindFirstClosest(this IEnumerable<Int32> enumerable, Int32 value)
         {
             return enumerable
-                .Select(a => new {a, distance = Math.Abs(a - value)})
-                .OrderBy(b => b.distance)
-                .First().a;
+                .Select(a => new {Value = a, Distance = Math.Abs(a - value)})
+                .OrderBy(b => b.Distance).ThenBy(c => c.Value)
+                .First().Value;
         }
 
         public static List<Int32> FindCountClosest(this IEnumerable<Int32> enumerable, Int32 value, Int32 count)
         {
             return enumerable
-                .Select(a => new {a, distance = Math.Abs(a - value)})
-                .OrderBy(b => b.distance)
+                .Select(a => new {Value = a, Distance = Math.Abs(a - value)})
+                .OrderBy(b => b.Distance).ThenBy(c => c.Value)
                 .Take(count)
-                .Select(c => c.a)
+                .Select(c => c.Value)
                 .ToList();
         }
 
         public static List<Int32> FindAllClosestWithinRange(this IEnumerable<Int32> enumerable, Int32 value, Int32 range)
         {
             return enumerable
-                .Select(a => new {a, distance = Math.Abs(a - value)})
-                .Where(b => b.distance <= range)
-                .Select(c => c.a)
+                .Select(a => new {Value = a, Distance = Math.Abs(a - value)})
+                .Where(b => b.Distance <= range)
+                .Select(c => c.Value)
                 .ToList();
         }
 

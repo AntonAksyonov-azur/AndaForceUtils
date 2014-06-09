@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="com\andaforce\arazect\collections\generic\extension\ArrayExtensionTest.cs" />
     <Compile Include="com\andaforce\arazect\collections\generic\extension\DictionaryExtensionTest.cs" />
+    <Compile Include="com\andaforce\arazect\collections\generic\extension\FindClosestValueTest.cs" />
     <Compile Include="com\andaforce\arazect\collections\generic\extension\ListExtensionTest.cs" />
     <Compile Include="com\andaforce\arazect\collections\generic\LinearArrayTest.cs" />
     <Compile Include="com\andaforce\arazect\collections\linq\ClonedLinqCompareMethodsTest.cs" />
