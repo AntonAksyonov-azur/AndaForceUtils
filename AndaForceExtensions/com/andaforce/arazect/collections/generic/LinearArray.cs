@@ -9,8 +9,8 @@ namespace AndaForceExtensions.com.andaforce.arazect.collections.generic
     public class LinearArray<T>
     {
         public T[] ArraySource { get; private set; }
-        public int Width;
-        public int Height;
+        public int Width { get; private set; }
+        public int Height { get; private set; }
 
         public LinearArray(int width, int height)
         {
