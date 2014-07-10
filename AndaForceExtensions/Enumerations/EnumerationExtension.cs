@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace AndaForceUtils.Enumerations
 {
@@ -20,6 +21,23 @@ namespace AndaForceUtils.Enumerations
             return output;
         }
 
+        public static T GetObjectValue<T>(this Enum value)
+        {
+            T output = default(T);
+            var attrs = value
+                .GetType()
+                .GetField(value.ToString())
+                .GetCustomAttributes(typeof (ObjectValue), false) as ObjectValue[];
+            if (attrs != null && attrs.Length > 0)
+            {
+                output = (T) attrs.First().Value;
+            }
+
+
+            return output;
+        }
+
+
         public class StringValue : Attribute
         {
             private readonly string _value;
@@ -30,6 +48,21 @@ namespace AndaForceUtils.Enumerations
             }
 
             public string Value
+            {
+                get { return _value; }
+            }
+        }
+
+        public class ObjectValue : Attribute
+        {
+            private readonly Object _value;
+
+            public ObjectValue(Object value)
+            {
+                _value = value;
+            }
+
+            public Object Value
             {
                 get { return _value; }
             }
