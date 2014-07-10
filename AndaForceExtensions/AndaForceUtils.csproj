@@ -8,8 +8,8 @@
     <ProjectGuid>{58B0A1A1-963F-4A81-9D5E-172A58F3B9CC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AndaForceExtensions</RootNamespace>
-    <AssemblyName>AndaForceExtensions</AssemblyName>
+    <RootNamespace>AndaForceUtils</RootNamespace>
+    <AssemblyName>AndaForce Utility Classes Collection</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
@@ -41,25 +41,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="com\andaforce\arazect\callback\AbstractCallbackChainElement.cs" />
-    <Compile Include="com\andaforce\arazect\callback\ChainActionStatus.cs" />
-    <Compile Include="com\andaforce\arazect\callback\ChainHelper.cs" />
-    <Compile Include="com\andaforce\arazect\collections\generic\extension\ArrayExtension.cs" />
-    <Compile Include="com\andaforce\arazect\collections\generic\extension\DictionaryExtension.cs" />
-    <Compile Include="com\andaforce\arazect\collections\generic\extension\FindClosestValues.cs" />
-    <Compile Include="com\andaforce\arazect\collections\generic\extension\IEnumerableExtension.cs" />
-    <Compile Include="com\andaforce\arazect\collections\generic\extension\ListExtension.cs" />
-    <Compile Include="com\andaforce\arazect\collections\generic\LinearArray.cs" />
-    <Compile Include="com\andaforce\arazect\collections\linq\ClonedLinqCompareMethods.cs" />
-    <Compile Include="com\andaforce\arazect\collections\linq\ClonedLinqSumMethods.cs" />
-    <Compile Include="com\andaforce\arazect\console\ConsoleWrapper.cs" />
-    <Compile Include="com\andaforce\arazect\datetime\DateTimeExtension.cs" />
-    <Compile Include="com\andaforce\arazect\enumerations\EnumExtension.cs" />
-    <Compile Include="com\andaforce\arazect\math\MathHelper.cs" />
-    <Compile Include="com\andaforce\arazect\package.helpers\RandomHelper.cs" />
-    <Compile Include="com\andaforce\arazect\random\RandomExtension.cs" />
-    <Compile Include="com\andaforce\arazect\serialization\ConfigurationLoader.cs" />
-    <Compile Include="com\andaforce\arazect\variables\IsValueBetween.cs" />
+    <Compile Include="Callback\AbstractCallbackChainElement.cs" />
+    <Compile Include="Callback\ChainActionStatus.cs" />
+    <Compile Include="Callback\ChainHelper.cs" />
+    <Compile Include="Collections\Generic\CycledList.cs" />
+    <Compile Include="Collections\Generic\Extension\ArrayExtension.cs" />
+    <Compile Include="Collections\Generic\Extension\DictionaryExtension.cs" />
+    <Compile Include="Collections\Generic\Extension\FindClosestValues.cs" />
+    <Compile Include="Collections\Generic\Extension\IEnumerableExtension.cs" />
+    <Compile Include="Collections\Generic\Extension\ListExtension.cs" />
+    <Compile Include="Collections\Generic\LinearArray.cs" />
+    <Compile Include="Collections\LinqClone\ClonedLinqCompareMethods.cs" />
+    <Compile Include="Collections\LinqClone\ClonedLinqSumMethods.cs" />
+    <Compile Include="Console\ConsoleWrapper.cs" />
+    <Compile Include="DateTime\Extension\DateTimeExtension.cs" />
+    <Compile Include="Enumerations\EnumerationExtension.cs" />
+    <Compile Include="Math\MathHelper.cs" />
+    <Compile Include="Internal\InternalRandomHelper.cs" />
+    <Compile Include="Random\RandomExtension.cs" />
+    <Compile Include="Serialization\ConfigurationLoader.cs" />
+    <Compile Include="Variables\Extension\IsValueBetween.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
