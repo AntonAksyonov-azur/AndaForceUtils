@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace AndaForceUtils.Collections.Generic
 {
-    public class CycledList<T>
+    public class CycledList<T> : IEnumerable<T>
     {
         public List<T> ListSource { get; private set; }
         public int CurrentPosition { get; private set; }
@@ -87,6 +88,16 @@ namespace AndaForceUtils.Collections.Generic
             {
                 CurrentPosition = CurrentPosition % ListSource.Count;    
             }
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            return ListSource.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }

@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace AndaForceUtils.Collections.Generic
 {
@@ -6,7 +9,7 @@ namespace AndaForceUtils.Collections.Generic
     /// Two-dimensional array presented as one-dimensional. Good for serialization, which doesnt accept two-dimensional arrays
     /// </summary>
     /// <typeparam name="T">Data type for array</typeparam>
-    public class LinearArray<T>
+    public class LinearArray<T> : IEnumerable<T>
     {
         public T[] ArraySource { get; private set; }
         public int Width { get; private set; }
@@ -80,6 +83,16 @@ namespace AndaForceUtils.Collections.Generic
             {
                 throw new Exception("Y-coordinate is out of bound");
             }
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            return ArraySource.AsEnumerable().GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }

@@ -58,6 +58,11 @@
     <Compile Include="Collections\LinqClone\ClonedLinqSumMethods.cs" />
     <Compile Include="Console\ConsoleWrapper.cs" />
     <Compile Include="DateTime\Extension\DateTimeExtension.cs" />
+    <Compile Include="DateTime\FluentDateTime\DateTime\DateTimeExtensions.cs" />
+    <Compile Include="DateTime\FluentDateTime\DateTime\TimeSpanExtensions.cs" />
+    <Compile Include="DateTime\FluentDateTime\FluentTimeSpan.cs" />
+    <Compile Include="DateTime\FluentDateTime\NumberExtensions.cs" />
+    <Compile Include="DateTime\FluentDateTime\RoundTo.cs" />
     <Compile Include="Enumerations\EnumerationExtension.cs" />
     <Compile Include="Math\MathHelper.cs" />
     <Compile Include="Internal\InternalRandomHelper.cs" />
