@@ -1,4 +1,6 @@
 using System;
+using AndaForceUtils.DateTime.FluentDateTime;
+using AndaForceUtils.DateTime.FluentDateTime.DateTime;
 using NUnit.Framework;
 
 namespace AndaForceExtensionsTest.Tests.DateTime.FluentDateTime
