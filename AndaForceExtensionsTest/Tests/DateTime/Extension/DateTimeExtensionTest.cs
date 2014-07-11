@@ -5,7 +5,7 @@ using NUnit.Framework;
 namespace AndaForceExtensionsTest.Tests.DateTime.Extension
 {
     [TestFixture]
-    public class DateTimeExtension
+    public class DateTimeExtensionTest
     {
         private static readonly object[] TomorrowData =
         {
